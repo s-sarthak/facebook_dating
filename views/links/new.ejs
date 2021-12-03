@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+<div class="container">
+	 
+ <h2 align="center">Create a new link to <%= campground.name%></h2>
+  
+  <div style="width: 30%; margin: 25px auto;"> 
+  	  <form action="/campgrounds/<%= campground._id%>/links" method="POST">
+	<input class="form-control" type="text" placeholder="text" name="link[text]"> <br> 
+   
+    <button class="btn btn-primary btn-md btn-block">Submit</button>
+    </form>
+    <div style=" margin: 15px auto;">
+       <a href="/campgrounds">Go back</a>
+    </div>
+  </div>
+  
+  
+</div>
+<% include ../partials/footer %>

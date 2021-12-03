@@ -1,0 +1,39 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+}
+
+
+#index_images{
+	height: 400px;
+	width: 340px;
+}
+
+#image_button{
+	background-color: rgb(249, 250, 252);
+    color: rgb(7,7,7);
+	transform: translate(0%, -300%);
+	width: 150px;
+	height: 50px;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.thumbnail{
+	padding: 3;
+	height: 455px;
+	width: 100%;
+	margin-left:px;
+}
+
+
+
+.centered {
+    background-color:"black"; 
+    position: absolute;
+    left : 140px ;
+    bottom: 2px;
+    transform: translate(0%, 0%);
+    font-family: 'Helvetica', 'Arial', sans-serif;
+
+}

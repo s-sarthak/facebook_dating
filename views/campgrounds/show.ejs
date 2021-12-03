@@ -1,0 +1,60 @@
+<% include ../partials/header %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<p clas="lead"><button type="button" class="btn btn-warning">All your important links</button></p>
+			<div class="well">
+				<div >
+					<a class="btn btn-success" href="/campgrounds/<%= campground._id%>/links/new">Add new link</a>
+				</div>
+				<hr>
+				<% campground.links.forEach(function(link){ %>
+				<div class="row">
+				   <div class="col-md-12">
+                      <strong><%= link.author.username%></strong>
+                      
+                      <p><a href="<%= link.text %>">
+					    <%= link.text %>
+					  </a></p>
+				   </div>
+				</div>
+				<% }) %>
+				
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="thumbnail">
+			  <iframe width="700" height="415" src="https://www.youtube.com/embed/z-OxzIC6pic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+			  </iframe>
+				
+				<div class="caption-full">
+					<h4><button type="button" class="btn btn-primary"><%= campground.name %></button></h4>
+					<p><button type="button" class="btn btn-danger" class="pull-right"><%= campground.desc %></button> </p>
+				</div>	
+			</div>
+			<div class="well">
+				<div class="text-right">
+					<a class="btn btn-success" href="/campgrounds/<%= campground._id%>/comments/new">Add new coment</a>
+				</div>
+				<hr>
+				<% campground.comments.forEach(function(comment){ %>
+				<div class="row">
+				   <div class="col-md-12">
+                      <strong><%= comment.author.username%></strong>
+                      
+                      <p>
+					    <%= comment.text %>
+					  </p>
+				   </div>
+				</div>
+				<% }) %>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<% include ../partials/footer %>
